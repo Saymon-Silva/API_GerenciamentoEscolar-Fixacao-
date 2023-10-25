@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Aluno {
+public class Aluno extends Usuario{
     @OneToOne
     private Turma turma;
 }

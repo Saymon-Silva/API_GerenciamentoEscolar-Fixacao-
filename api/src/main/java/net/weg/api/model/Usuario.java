@@ -1,7 +1,6 @@
 package net.weg.api.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Usuario {
+@IdClass(UsuarioId.class)
+public abstract class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
     private Long cpf;
     private String nome;

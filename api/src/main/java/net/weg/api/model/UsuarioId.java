@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UsuarioId {
-    private Integer usuarioID;
-    private Integer usuarioCpf;
-
+    private Integer id;
+    private Integer cpf;
 }
